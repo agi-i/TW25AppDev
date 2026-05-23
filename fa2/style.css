@@ -1,0 +1,44 @@
+*{
+    background-color:bisque;
+    margin: 0;
+    padding: 0;
+    font-style: Times New Roman;
+}
+
+.menu li{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #C8A68F;
+    border-radius: 10px;
+    margin-top: 60px;
+    margin-left: 60px;
+    margin-right: 60px;
+    padding: 70px; 
+}
+.menu li a{
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+td {
+    background-color: #fff;
+}

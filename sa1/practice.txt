@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Registration Form</title>
+</head>
+<body>
+
+    <h2>Student Registration Form</h2>
+    
+    <form action="" method="POST">
+        <label>Student Number:</label><br>
+        <input type="text" name="student_num" required><br><br>
+
+        <label>First Name:</label><br>
+        <input type="text" name="first_name" required><br><br>
+
+        <label>Last Name:</label><br>
+        <input type="text" name="last_name" required><br><br>
+
+        <label>Tuition Fee:</label><br>
+        <input type="number" name="tuition" required><br><br>
+
+        <input type="submit" name="submit" value="Submit">
+    </form>
+
+    <hr>
+
+    <?php
+    if (isset($_POST['submit'])) {
+        
+        $student_num = $_POST['student_num'];
+        $first_name = $_POST['first_name'];
+        $last_name = $_POST['last_name'];
+        $tuition = $_POST['tuition'];
+
+        $clean_first = ucwords(strtolower($first_name));
+        $clean_last = ucfirst(strtolower($last_name));
+        
+        // Number formats
+        $formatted_tuition = number_format($tuition, 2);
+
+        // OUTPUT
+        echo "<h3>Submitted Data:</h3>";
+        echo "<b>Student Number:</b> " . $student_num . "<br>";
+        echo "<b>Full Name:</b> " . $clean_last . ", " . $clean_first . "<br>";
+        echo "<b>Tuition Fee:</b> PHP " . $formatted_tuition . "<br>";
+    }
+    ?>
+
+</body>
+</html>
